@@ -35,10 +35,8 @@ client.on('message', async msg => {
   }
   
   if (command === 'help' || command === 'commands') {
-    msg.reply("**Current Commands**: `;help` - Shows a list of commands that are displayed in this message! *Aliases: commands*  
-              `;purge` - Purges the amount of messages given. *Aliases: clean, clear* 
-              `;slowmode` - Makes it so a user can only send a message in the given amount of time. *Aliases: none* 
-              `;ping`- Gives the bot's ping. *Aliases: none*")
+    msg.reply("**Current Commands**: `;help` - Shows a list of commands that are displayed in this message! *Aliases: commands* | `;purge` - Purges the amount of messages given. *Aliases: clean, clear* | `;slowmode` - Makes it so a user can only send a message in the given amount of time. *Aliases: none* |  `;ping`- Gives the bot's ping. *Aliases: none*")   
+            
   }
   
   if (command === 'slowmode') {
