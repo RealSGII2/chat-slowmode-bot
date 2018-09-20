@@ -35,7 +35,7 @@ client.on('message', async msg => {
   }
   
   if (command === 'help' || command === 'commands') {
-    msg.reply("**Current Commands**: `;help`, `;purge`, `;slowmode`, `;ping`")
+    msg.reply("**Current Commands**: `;help` - Shows a list of commands that are displayed in this message! *Aliases: commands*  `;purge` - Purges the amount of messages given. *Aliases: clean, clear* `;slowmode`, `;ping`")
   }
   
   if (command === 'slowmode') {
