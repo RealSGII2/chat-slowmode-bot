@@ -12,10 +12,10 @@ client.on('message', async msg => {
   const command = args.shift().toLowerCase();
   if (command === 'ping') {
     const m = await msg.channel.send("Pinging...");
-    m.edit(`**Pong!** Latency is ${m.createdTimestamp - msg.createdTimestamp}**ms**. API Latency is ${Math.round(client.ping)}**ms**`);
+    m.edit(`**Pong!** Latency is **${m.createdTimestamp - msg.createdTimestamp}**ms. API Latency is **${Math.round(client.ping)}**ms`);
   }
-  if (command === 'hi' || command === 'hello') {
-    msg.reply('bye!');
+  if (command === 'hi' || command === 'Hello!') {
+    msg.reply('Bye!');
   }
   if (command === 'say' || command === 'send') {
     const allowid = [0];
@@ -26,8 +26,8 @@ client.on('message', async msg => {
   if(command === 'purge' || command === 'clean' || command === 'clear') {
     const deleteCount = parseInt(args[0], 10);
     
-    if(!deleteCount || deleteCount < 2 || deleteCount > 10000)
-      return msg.reply("please provide a number between 2 and 10,000 for the number of messages to delete!");
+    if(!deleteCount || deleteCount < 2 || deleteCount > 100)
+      return msg.reply("please provide a number between 2 and 100 for the number of messages to delete!");
     
     const fetched = await msg.channel.fetchMessages({limit: deleteCount});
     msg.channel.bulkDelete(fetched)
