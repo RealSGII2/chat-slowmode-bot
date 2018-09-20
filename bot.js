@@ -35,8 +35,7 @@ client.on('message', async msg => {
   }
   
   if (command === 'help' || command === 'commands') {
-    msg.reply("**Current Commands**:
-              ;help, ;purge, ;slowmode, ;hi")
+    msg.reply("**Current Commands**: ;help, ;purge, ;slowmode, ;ping")
   }
   
   if (command === 'slowmode') {
