@@ -14,7 +14,7 @@ client.on('message', async msg => {
     const m = await msg.channel.send("Pinging...");
     m.edit(`Pong! Latency is **${m.createdTimestamp - msg.createdTimestamp}ms!** API Latency is **${Math.round(client.ping)}ms!**`);
   }
-  if (command === 'hi' || command === 'Hello!') {
+  if (command === 'Hi' || command === 'Hello!') {
     msg.reply('Bye!');
   }
   if (command === 'say' || command === 'send') {
@@ -27,7 +27,7 @@ client.on('message', async msg => {
     const deleteCount = parseInt(args[0], 10);
     
     if(!deleteCount || deleteCount < 2 || deleteCount > 100)
-      return msg.reply("please provide a number between 2 and 100 for the number of messages to delete!");
+      return msg.reply("Please provide a number between 2 and 100 for the number of messages to delete!");
     
     const fetched = await msg.channel.fetchMessages({limit: deleteCount});
     msg.channel.bulkDelete(fetched)
@@ -41,7 +41,7 @@ client.on('message', async msg => {
   if (command === 'slowmode') {
     const time = args.shift()
     const reason = args.join(" ");
-    msg.reply(`the limit has been set to ${time} seconds because of ${reason}.`);
+    msg.reply(`The limit has been set to ${time} seconds because of ${reason}.`);
     msg.channel.setRateLimitPerUser(time, reason);
   }
 });
