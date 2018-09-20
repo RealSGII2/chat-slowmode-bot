@@ -35,7 +35,8 @@ client.on('message', async msg => {
   }
   
   if (command === 'help' || command === 'commands') {
-    msg.reply("In development!")
+    msg.reply("**Current Commands**:
+              ;help, ;purge, ;slowmode, ;hi")
   }
   
   if (command === 'slowmode') {
