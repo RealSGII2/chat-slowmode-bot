@@ -12,7 +12,7 @@ client.on('message', async msg => {
   const command = args.shift().toLowerCase();
   if (command === 'ping') {
     const m = await msg.channel.send("Pinging...");
-    m.edit(`Pong! Latency is ${`m.createdTimestamp - msg.createdTimestamp`}ms! API Latency is ${`Math.round(client.ping)}ms!`);
+    m.edit(`Pong! Latency is **${m.createdTimestamp - msg.createdTimestamp}ms!** API Latency is **${Math.round(client.ping)}ms!**`);
   }
   if (command === 'hi' || command === 'Hello!') {
     msg.reply('Bye!');
