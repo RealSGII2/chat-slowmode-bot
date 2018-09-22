@@ -7,7 +7,7 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "discord.js": "11.1.0",
+    "discord.js": "master",
     "request": "2.81.0"
   }
 }
